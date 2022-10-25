@@ -1,10 +1,10 @@
 #EXERCICI3
 
 import os
-#First of all we will cut the bbbVideo to 30 seconds to then resize that video
+#First of all we will cut the bbbVideo to 30 seconds in order to have a shorter video to do the resizing
 os.system("ffmpeg -i bbbVideo.mp4 -ss 0 -to 30 -c:v copy -c:a copy cutVideo30seg.mp4")
 
-#Resize the bbbVideo to 720p
+#Resize the 30 seconds bbbVideo to 720p
 os.system("ffmpeg -i cutVideo30seg.mp4 -vf scale=-1:720 bbbVideo_720p.mp4")
 
 #Resize the 30 seconds bbbVideo to 480p
